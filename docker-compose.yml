@@ -1,0 +1,8 @@
+version: "3"
+services:
+    jenkins:
+        image: bitman26/jenkins-kubernetes:v4.0
+        volumes:
+         - ./backup:/srv/backup 
+        ports:
+         -  "8080:8080"
