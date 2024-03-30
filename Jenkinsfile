@@ -10,9 +10,6 @@ pipeline {
     
     stages {
         stage('Build and Push Docker Image') {
-            agent {
-                label 'docker-cloud01'
-            }
             steps {
                 script {
                     // Clone do repositório
