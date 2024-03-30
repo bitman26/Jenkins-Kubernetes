@@ -1,5 +1,5 @@
 pipeline {
-  agent Docker-Server
+  agent docker
   stages {
     stage('Build Image') {
       steps {
