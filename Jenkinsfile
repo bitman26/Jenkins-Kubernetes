@@ -1,5 +1,5 @@
 pipeline {
-     agent {
+    agent {
         docker {
             label 'Docker-Server'
         }
@@ -34,7 +34,6 @@ pipeline {
             }
         }
     }
-
     post {
         success {
             echo 'Pipeline executada com sucesso!'
