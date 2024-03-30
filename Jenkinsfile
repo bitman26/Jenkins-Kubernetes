@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Copiar o repositório clonado para o servidor remoto
-                    sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
+                    sshagent(credentials: ['key-ssh-docker']) {
                         sh "scp -o StrictHostKeyChecking=no -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/tmp"
                     }
                 }
