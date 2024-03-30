@@ -1,12 +1,8 @@
 pipeline {
     agent {
-        docker {
-            image 'bitman26/jenkins-kubernetes'
-            label 'Docker-Server'
-            registryUrl 'https://index.docker.io/v1/'
-            registryCredentialsId 'docker-hub'
-        }
+        label 'Docker-Server'
     }
+    
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
@@ -22,8 +18,7 @@ pipeline {
         stage('Construir imagem Docker') {
             steps {
                 script {
-                    docker.build("${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}")
-                }
+                    docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0
             }
         }
 
