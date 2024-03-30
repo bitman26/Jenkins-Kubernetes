@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git Stage') {
       steps {
-        git(credentialsId: 'jenkins-ssh-git', url: 'https://github.com/bitman26/Jenkins-Kubernetes.git', branch: 'main')
+        git(credentialsId: 'bitman26', url: 'https://github.com/bitman26/Jenkins-Kubernetes.git', branch: 'main')
       }
     }
 
