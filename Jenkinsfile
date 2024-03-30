@@ -1,7 +1,10 @@
 pipeline {
     agent {
         docker {
+            image 'bitman26/jenkins-kubernetes'
             label 'Docker-Server'
+            registryUrl 'https://index.docker.io/v1/'
+            registryCredentialsId 'docker-hub'
         }
     }
     environment {
