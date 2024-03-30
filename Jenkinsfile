@@ -1,32 +1,25 @@
 pipeline {
-    agent {
-        label 'Docker-Server'
-    }
+    agent none
 
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
     }
-
+    
     stages {
-        stage('Clonar repositório') {
+        stage('Build Docker Image') {
+            agent {
+                label 'docker-cloud01'
+            }
             steps {
                 git(branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git')
-            }
-        }
-
-        stage('Construir imagem Docker') {
-            steps {
                 script {
                     docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0")
                 }
             }
-        }
-
-        stage('Push para Docker Hub') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
                         docker.image("${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}").push()
                     }
                 }
