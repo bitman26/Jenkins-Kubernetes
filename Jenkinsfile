@@ -12,7 +12,7 @@ pipeline {
         stage('GIT Stage') {
             steps {
                 // Clonar o repositório via SSH
-                git branch: 'main', credentialsId: 'jenkins-token', url: 'https://github.com/bitman26/Jenkins-Kubernetes.git'
+                git branch: 'main', credentialsId: 'jenkins-token', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
             } 
         }
         
