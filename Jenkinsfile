@@ -51,12 +51,12 @@ pipeline {
     
     post {
         success {
-            sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes
+            sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
             echo 'Pipeline executada com sucesso!'
         }
         failure {
             echo 'Falha na execução da pipeline.'
-            sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes
+            sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
         }
     }
 }
