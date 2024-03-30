@@ -1,34 +1,31 @@
 pipeline {
-    agent {
-        docker {
-            image 'docker:latest'
-            args '-v /var/run/docker.sock:/var/run/docker.sock --host tcp://172.22.129.214:2376'
-
-        }
-    }
-
+    agent any
+    
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
-    }
+        DOCKER_HOST = 'tcp://172.22.129.214:2376'     }
     
     stages {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    // Clone do repositório
+                    // Clonar o repositório
                     git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
-                    // Construir a imagem Docker
-                    docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0")
+                    
+                    // Construir a imagem Docker na máquina remota
+                    sh "docker -H ${DOCKER_HOST} build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0 ."
+                    
+                    // Fazer login no Docker Hub (se necessário)
+                    sh "docker -H ${DOCKER_HOST} login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
+                    
                     // Fazer push da imagem para o Docker Hub
-                    docker.withRegistry('https://index.docker.io/v1/', DOCKER_CREDENTIALS_ID) {
-                        docker.image("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0").push()
-                    }
+                    sh "docker -H ${DOCKER_HOST} push ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0"
                 }
             }
         }
     }
-
+    
     post {
         success {
             echo 'Pipeline executada com sucesso!'
