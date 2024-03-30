@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-
+     agent {
+        docker {
+            label 'Docker-Server'
+        }
+    }
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
