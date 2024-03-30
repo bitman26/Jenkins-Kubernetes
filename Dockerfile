@@ -11,4 +11,4 @@ RUN echo 2.112 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
 RUN echo 2.112 > /usr/share/jenkins/ref/jenkins.install.InstallUtil.lastExecVersion
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
-COPY --chown=jenkins:jenkins ./backup/FULL-2024-02-10_19-37 /var/jenkins_home
+COPY --chown=jenkins:jenkins ./backup/FULL-2024-01-28_19-33 /var/jenkins_home
