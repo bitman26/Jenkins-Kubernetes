@@ -9,13 +9,14 @@ pipeline {
 
     stage('Build Image') {
       steps {
-        sh 'docker build . -t bitman26/jenkins-kubernetes:<image name>'
+        sh 'docker build . -t ${usuario}/jenkins-kubernetes:${tagname}'
       }
     }
 
     stage('Export Image') {
       steps {
-        sh 'docker login  -u bitman26 '
+        sh '''docker login  -u ${usuario} -p ${password}
+docker push ${usuario}/jenkins-kubernetes:${tagname}'''
       }
     }
 
