@@ -2,7 +2,7 @@ pipeline {
     agent {
         label 'Docker-Server'
     }
-    
+
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
@@ -18,7 +18,7 @@ pipeline {
         stage('Construir imagem Docker') {
             steps {
                 script {
-                    docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0")
+                    docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0") 
             }
         }
 
@@ -39,5 +39,6 @@ pipeline {
         failure {
             echo 'Falha na execução da pipeline.'
         }
+    }
     }
 }
