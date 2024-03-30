@@ -18,20 +18,22 @@ pipeline {
         stage('Construir imagem Docker') {
             steps {
                 script {
-                    docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0") 
+                    docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0")
+                }
             }
         }
 
         stage('Push para Docker Hub') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', DOCKER_CREDENTIALS_ID) {
+                    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                         docker.image("${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}").push()
                     }
                 }
             }
         }
     }
+
     post {
         success {
             echo 'Pipeline executada com sucesso!'
@@ -39,6 +41,5 @@ pipeline {
         failure {
             echo 'Falha na execução da pipeline.'
         }
-    }
     }
 }
