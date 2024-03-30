@@ -20,8 +20,4 @@ pipeline {
     }
 
   }
-  environment {
-    version = ''
-    password = ''
-  }
 }
