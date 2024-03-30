@@ -4,7 +4,6 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
-        SSH_CREDENTIALS_ID = 'key-ssh-docker'
         SSH_USER = 'teste'
         SSH_HOST = '172.22.129.214'
     }
@@ -13,7 +12,7 @@ pipeline {
         stage('GIT Stage') {
             steps {
                 // Clonar o repositório via SSH
-                git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'https://github.com/bitman26/Jenkins-Kubernetes.git'
+                git branch: 'main', credentialsId: 'jenkins-token', url: 'https://github.com/bitman26/Jenkins-Kubernetes.git'
             } 
         }
         
@@ -32,17 +31,17 @@ pipeline {
             steps {
                 script {
                     // Construir a imagem Docker no host remoto
-                    sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
+                    sshagent(credentials: ['key-ssh-docker']) {
                         sh "ssh ${SSH_USER}@${SSH_HOST} 'cd /tmp/Jenkins-Kubernetes && docker build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0 .'"
                     }
 
                     // Fazer login no Docker Hub no host remoto
-                    sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
+                    sshagent(credentials: ['key-ssh-docker']) {
                         sh "ssh ${SSH_USER}@${SSH_HOST} 'docker login -u ${DOCKER_CREDENTIALS_ID} -p ${DOCKER_CREDENTIALS_ID}'"
                     }
 
                     // Fazer push da imagem para o Docker Hub no host remoto
-                    sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
+                    sshagent(credentials: ['key-ssh-docker']) {
                         sh "ssh ${SSH_USER}@${SSH_HOST} 'docker push ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0'"
                     }
                 }
