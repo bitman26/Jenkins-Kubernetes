@@ -7,20 +7,19 @@ pipeline {
     }
     
     stages {
-        stage('Build Docker Image') {
+        stage('Build and Push Docker Image') {
             agent {
                 label 'docker-cloud01'
             }
             steps {
-                git(branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git')
                 script {
+                    // Clone do repositório
+                    git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
+                    // Construir a imagem Docker
                     docker.build("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0")
-                }
-            }
-            steps {
-                script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
-                        docker.image("${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}").push()
+                    // Fazer push da imagem para o Docker Hub
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKER_CREDENTIALS_ID) {
+                        docker.image("${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0").push()
                     }
                 }
             }
