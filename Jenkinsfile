@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
-        SSH_CREDENTIALS_ID = 'ssh-key-docker'
+        SSH_CREDENTIALS_ID = 'jenkins-ssh-git'
         SSH_USER = 'teste'
         SSH_HOST = '172.22.129.214'
     }
