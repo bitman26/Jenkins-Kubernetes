@@ -1,10 +1,8 @@
 pipeline {
     agent {
         docker {
-            // Especifica o DOCKER_HOST
-            remote: 'tcp://172.22.129.214:2376'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
             image 'docker:latest'
+            args '-v /var/run/docker.sock:/var/run/docker.sock --host tcp://172.22.129.214:2376'
 
         }
     }
