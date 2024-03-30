@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar repositório') {
             steps {
-                git 'git@github.com:bitman26/Jenkins-Kubernetes.git'
+                git(branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git')
             }
         }
 
