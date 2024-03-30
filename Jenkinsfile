@@ -17,7 +17,7 @@ pipeline {
                     // Clonar o repositório via SSH
                     git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
                     // Copiar o repositório clonado para o servidor remoto
-                    sh "scp -v -o StrictHostKeyChecking=no -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/home/teste"
+                    sh "scp -o StrictHostKeyChecking=no -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/home/teste"
                 } 
             } 
         }
