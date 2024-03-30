@@ -9,35 +9,39 @@ pipeline {
         SSH_HOST = '172.22.129.214'
     }
 
-
     stages {
         stage('GIT Stage') {
             steps {
-               // Clonar o repositório via SSH
-               git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
+                // Clonar o repositório via SSH
+                git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
+            } 
+        }
+        
+        stage('Copy Repository to Remote Server') {
+            steps {
                 script {
                     // Copiar o repositório clonado para o servidor remoto
                     sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
-                      sh "scp  -o StrictHostKeyChecking=no -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/home/teste"
+                        sh "scp -o StrictHostKeyChecking=no -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/tmp"
                     }
-                } 
+                }
             } 
         }
         
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    // Construir a imagem Docker
+                    // Construir a imagem Docker no host remoto
                     sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
-                        sh "ssh ${SSH_USER}@${SSH_HOST} 'cd Jenkins-Kubernetes && docker build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0 .'"
+                        sh "ssh ${SSH_USER}@${SSH_HOST} 'cd /tmp/Jenkins-Kubernetes && docker build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0 .'"
                     }
 
-                    // Fazer login no Docker Hub
+                    // Fazer login no Docker Hub no host remoto
                     sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
                         sh "ssh ${SSH_USER}@${SSH_HOST} 'docker login -u ${DOCKER_CREDENTIALS_ID} -p ${DOCKER_CREDENTIALS_ID}'"
                     }
 
-                    // Fazer push da imagem para o Docker Hub
+                    // Fazer push da imagem para o Docker Hub no host remoto
                     sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
                         sh "ssh ${SSH_USER}@${SSH_HOST} 'docker push ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0'"
                     }
