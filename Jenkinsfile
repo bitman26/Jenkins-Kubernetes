@@ -1,7 +1,10 @@
-env.DOCKER_HOST = 'tcp://172.22.129.214:2376'
-
 pipeline {
-    agent none
+    agent {
+        docker {
+            // Especifica o DOCKER_HOST
+            remote: 'tcp://172.22.129.214:2376'
+        }
+    }
 
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub'
