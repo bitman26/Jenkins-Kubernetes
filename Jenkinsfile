@@ -13,11 +13,15 @@ pipeline {
     stages {
         stage('GIT Stage') {
             steps {
-	            git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
-                sh  "scp -Rap Jenkins-Kubernetes  ${SSH_USER}@${SSH_HOST}:/home/teste"
+                script {
+                    // Clonar o repositório via SSH
+                    git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
+                    // Copiar o repositório clonado para o servidor remoto
+                    sh "scp -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/home/teste"
+                } 
             } 
-        } 
-	    
+        }
+        
         stage('Build and Push Docker Image') {
             steps {
                 script {
