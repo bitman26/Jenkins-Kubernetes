@@ -1,144 +1,136 @@
-Ansible plugin (ansible): 307.va_1f3ef06575a_
-Ant Plugin (ant): 497.v94e7d9fffa_b_9
-OWASP Markup Formatter Plugin (antisamy-markup-formatter): 162.v0e6ec0fcfcf6
-Apache HttpComponents Client 4.x API Plugin (apache-httpcomponents-client-4-api): 4.5.14-208.v438351942757
-ASM API Plugin (asm-api): 9.6-3.v2e1fa_b_338cd7
-Authentication Tokens API Plugin (authentication-tokens): 1.53.v1c90fd9191a_b_
-AWS Credentials Plugin (aws-credentials): 231.v08a_59f17d742
-Amazon Web Services SDK :: Api Gateway (aws-java-sdk-api-gateway): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Autoscaling (aws-java-sdk-autoscaling): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: CloudFormation (aws-java-sdk-cloudformation): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: CloudFront (aws-java-sdk-cloudfront): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: CodeBuild (aws-java-sdk-codebuild): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: CodeDeploy (aws-java-sdk-codedeploy): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: EC2 (aws-java-sdk-ec2): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: ECR (aws-java-sdk-ecr): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: ECS (aws-java-sdk-ecs): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: EFS (aws-java-sdk-efs): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Elastic Beanstalk (aws-java-sdk-elasticbeanstalk): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Elastic Load Balancing V2 (aws-java-sdk-elasticloadbalancingv2): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: IAM (aws-java-sdk-iam): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: kinesis (aws-java-sdk-kinesis): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Lambda (aws-java-sdk-lambda): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Logs (aws-java-sdk-logs): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Minimal (aws-java-sdk-minimal): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Organizations (aws-java-sdk-organizations): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: Secrets Manager (aws-java-sdk-secretsmanager): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: SNS (aws-java-sdk-sns): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: SQS (aws-java-sdk-sqs): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: SSM (aws-java-sdk-ssm): 1.12.671-445.ve02f9b_558f2e
-Amazon Web Services SDK :: All (aws-java-sdk): 1.12.671-445.ve02f9b_558f2e
-Bitbucket Pipeline for Blue Ocean (blueocean-bitbucket-pipeline): 1.27.11
-Common API for Blue Ocean (blueocean-commons): 1.27.11
-Config API for Blue Ocean (blueocean-config): 1.27.11
-Blue Ocean Core JS (blueocean-core-js): 1.27.11
-Dashboard for Blue Ocean (blueocean-dashboard): 1.27.11
-Display URL for Blue Ocean (blueocean-display-url): 2.4.2
-Events API for Blue Ocean (blueocean-events): 1.27.11
-Git Pipeline for Blue Ocean (blueocean-git-pipeline): 1.27.11
-GitHub Pipeline for Blue Ocean (blueocean-github-pipeline): 1.27.11
-i18n for Blue Ocean (blueocean-i18n): 1.27.11
-JWT for Blue Ocean (blueocean-jwt): 1.27.11
-Personalization for Blue Ocean (blueocean-personalization): 1.27.11
-Pipeline implementation for Blue Ocean (blueocean-pipeline-api-impl): 1.27.11
-Blue Ocean Pipeline Editor (blueocean-pipeline-editor): 1.27.11
-Pipeline SCM API for Blue Ocean (blueocean-pipeline-scm-api): 1.27.11
-REST Implementation for Blue Ocean (blueocean-rest-impl): 1.27.11
-REST API for Blue Ocean (blueocean-rest): 1.27.11
-Web for Blue Ocean (blueocean-web): 1.27.11
-Blue Ocean (blueocean): 1.27.11
-Bootstrap 5 API Plugin (bootstrap5-api): 5.3.3-1
-bouncycastle API Plugin (bouncycastle-api): 2.30.1.77-225.v26ea_c9455fd9
-Branch API Plugin (branch-api): 2.1152.v6f101e97dd77
-Build Timeout (build-timeout): 1.32
-Caffeine API Plugin (caffeine-api): 3.1.8-133.v17b_1ff2e0599
-Checks API plugin (checks-api): 2.0.2
-Bitbucket Branch Source Plugin (cloudbees-bitbucket-branch-source): 883.v041fa_695e9c2
-Folders Plugin (cloudbees-folder): 6.928.v7c780211d66e
-Command Agent Launcher Plugin (command-launcher): 107.v773860566e2e
-commons-lang3 v3.x Jenkins API Plugin (commons-lang3-api): 3.13.0-62.v7d18e55f51e2
-commons-text API Plugin (commons-text-api): 1.11.0-95.v22a_d30ee5d36
-Credentials Binding Plugin (credentials-binding): 657.v2b_19db_7d6e6d
-Credentials Plugin (credentials): 1337.v60b_d7b_c7b_c9f
-Display URL API (display-url-api): 2.200.vb_9327d658781
-Durable Task Plugin (durable-task): 550.v0930093c4b_a_6
-ECharts API Plugin (echarts-api): 5.5.0-1
-Email Extension Plugin (email-ext): 2.105
-Favorite (favorite): 2.208.v91d65b_7792a_c
-Font Awesome API Plugin (font-awesome-api): 6.5.1-3
-Git client plugin (git-client): 4.7.0
-Git plugin (git): 5.2.1
-GitHub API Plugin (github-api): 1.318-461.v7a_c09c9fa_d63
-GitHub Branch Source Plugin (github-branch-source): 1785.v99802b_69816c
-GitHub plugin (github): 1.38.0
-Gradle Plugin (gradle): 2.10
-Gson API Plugin (gson-api): 2.10.1-15.v0d99f670e0a_7
-Handy Uri Templates 2.x API Plugin (handy-uri-templates-2-api): 2.1.8-30.v7e777411b_148
-HTML Publisher plugin (htmlpublisher): 1.33
-Instance Identity (instance-identity): 185.v303dc7c645f9
-Ionicons API (ionicons-api): 56.v1b_1c8c49374e
-Jackson 2 API Plugin (jackson2-api): 2.17.0-379.v02de8ec9f64c
-Jakarta Activation API (jakarta-activation-api): 2.1.3-1
-Jakarta Mail API (jakarta-mail-api): 2.1.3-1
-JavaBeans Activation Framework (JAF) API (javax-activation-api): 1.2.0-6
-JavaMail API (javax-mail-api): 1.6.2-9
-JAXB plugin (jaxb): 2.3.9-1
-Oracle Java SE Development Kit Installer Plugin (jdk-tool): 73.vddf737284550
-Design Language (jenkins-design-language): 1.27.11
-Java JSON Web Token (JJWT) Plugin (jjwt-api): 0.11.5-112.ve82dfb_224b_a_d
-Joda Time API Plugin (joda-time-api): 2.12.7-29.v5a_b_e3a_82269a_
-JQuery3 API Plugin (jquery3-api): 3.7.1-2
-JSON Api Plugin (json-api): 20240303-41.v94e11e6de726
-JSON Path API Plugin (json-path-api): 2.9.0-58.v62e3e85b_a_655
-JUnit Plugin (junit): 1265.v65b_14fa_f12f0
-LDAP Plugin (ldap): 719.vcb_d039b_77d0d
-Mailer Plugin (mailer): 472.vf7c289a_4b_420
-Matrix Authorization Strategy Plugin (matrix-auth): 3.2.2
-Matrix Project Plugin (matrix-project): 822.824.v14451b_c0fd42
-Mina SSHD API :: Common (mina-sshd-api-common): 2.12.1-101.v85b_e08b_780dd
-Mina SSHD API :: Core (mina-sshd-api-core): 2.12.1-101.v85b_e08b_780dd
-OkHttp Plugin (okhttp-api): 4.11.0-172.vda_da_1feeb_c6e
-PAM Authentication plugin (pam-auth): 1.10
-Pipeline: AWS Steps (pipeline-aws): 1.45
-Pipeline: Build Step (pipeline-build-step): 540.vb_e8849e1a_b_d8
-Pipeline: GitHub Groovy Libraries (pipeline-github-lib): 42.v0739460cda_c4
-Pipeline Graph Analysis Plugin (pipeline-graph-analysis): 216.vfd8b_ece330ca_
-Pipeline: Groovy Libraries (pipeline-groovy-lib): 704.vc58b_8890a_384
-Pipeline: Input Step (pipeline-input-step): 491.vb_07d21da_1a_fb_
-Pipeline: Milestone Step (pipeline-milestone-step): 111.v449306f708b_7
-Pipeline: Model API (pipeline-model-api): 2.2184.v0b_358b_953e69
-Pipeline: Declarative (pipeline-model-definition): 2.2184.v0b_358b_953e69
-Pipeline: Declarative Extension Points API (pipeline-model-extensions): 2.2184.v0b_358b_953e69
-Pipeline: REST API Plugin (pipeline-rest-api): 2.34
-Pipeline: Stage Step (pipeline-stage-step): 312.v8cd10304c27a_
-Pipeline: Stage Tags Metadata (pipeline-stage-tags-metadata): 2.2184.v0b_358b_953e69
-Pipeline: Stage View Plugin (pipeline-stage-view): 2.34
-Plain Credentials Plugin (plain-credentials): 179.vc5cb_98f6db_38
-Plugin Utilities API Plugin (plugin-util-api): 4.1.0
-Pub-Sub "light" Bus (pubsub-light): 1.18
-Resource Disposer Plugin (resource-disposer): 0.23
-SCM API Plugin (scm-api): 689.v237b_6d3a_ef7f
-Script Security Plugin (script-security): 1326.vdb_c154de8669
-SnakeYAML API Plugin (snakeyaml-api): 2.2-111.vc6598e30cc65
-Server Sent Events (SSE) Gateway Plugin (sse-gateway): 1.26
-SSH Credentials Plugin (ssh-credentials): 334.v7732563deee1
-SSH Build Agents plugin (ssh-slaves): 2.948.vb_8050d697fec
-SSH server (sshd): 3.322.v159e91f6a_550
-Structs Plugin (structs): 337.v1b_04ea_4df7c8
-Terraform Plugin (terraform): 1.0.10
-ThinBackup (thinBackup): 1.18
-Timestamper (timestamper): 1.26
-Token Macro Plugin (token-macro): 400.v35420b_922dcb_
-Trilead API Plugin (trilead-api): 2.142.v748523a_76693
-Variant Plugin (variant): 60.v7290fc0eb_b_cd
-Pipeline (workflow-aggregator): 596.v8c21c963d92d
-Pipeline: API (workflow-api): 1291.v51fd2a_625da_7
-Pipeline: Basic Steps (workflow-basic-steps): 1049.v257a_e6b_30fb_d
-Pipeline: Groovy (workflow-cps): 3889.v937e0b_3412d3
-Pipeline: Nodes and Processes (workflow-durable-task-step): 1331.vc8c2fed35334
-Pipeline: Job (workflow-job): 1400.v7fd111b_ec82f
-Pipeline: Multibranch (workflow-multibranch): 783.va_6eb_ef636fb_d
-Pipeline: SCM Step (workflow-scm-step): 427.v4ca_6512e7df1
-Pipeline: Step API (workflow-step-api): 657.v03b_e8115821b_
-Pipeline: Supporting APIs (workflow-support): 896.v175a_a_9c5b_78f
-Workspace Cleanup Plugin (ws-cleanup): 0.45
+ansible:307.va_1f3ef06575a_
+docker-plugin:1.6
+thinBackup:1.18
+ant:497.v94e7d9fffa_b_9
+antisamy-markup-formatter:162.v0e6ec0fcfcf6
+apache-httpcomponents-client-4-api:4.5.14-208.v438351942757
+authentication-tokens:1.53.v1c90fd9191a_b_
+aws-credentials:218.v1b_e9466ec5da_
+aws-java-sdk-cloudformation:1.12.633-430.vf9a_e567a_244f
+aws-java-sdk-codebuild:1.12.633-430.vf9a_e567a_244f
+aws-java-sdk-ec2:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-ecr:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-ecs:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-efs:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-elasticbeanstalk:1.12.633-430.vf9a_e567a_244f
+aws-java-sdk-iam:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-kinesis:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-logs:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-minimal:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-secretsmanager:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-sns:1.12.671-445.ve02f9b_558f2ef
+aws-java-sdk-sqs:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk-ssm:1.12.671-445.ve02f9b_558f2e
+aws-java-sdk:1.12.671-445.ve02f9b_558f2e
+blueocean-bitbucket-pipeline:1.27.10
+blueocean-commons:1.27.11
+blueocean-config:1.27.11
+blueocean-core-js:1.27.11
+blueocean-dashboard:1.27.11
+blueocean-display-url:2.4.2
+blueocean-events:1.27.11
+blueocean-git-pipeline:1.27.11
+blueocean-github-pipeline:1.27.11
+blueocean-i18n:1.27.11
+blueocean-jwt:1.27.11
+blueocean-personalization:1.27.11
+blueocean-pipeline-api-impl:1.27.11
+blueocean-pipeline-editor:1.27.11
+blueocean-pipeline-scm-api:1.27.11
+blueocean-rest-impl:1.27.11
+blueocean-rest:1.27.11
+blueocean-web:1.27.11
+blueocean:1.27.11
+bootstrap5-api:5.3.2-3
+bouncycastle-api:2.30.1.77-225.v26ea_c9455fd9
+branch-api:2.1144.v1425d1c3d5a_7
+build-timeout:1.32
+caffeine-api:3.1.8-133.v17b_1ff2e0599
+checks-api:2.0.2
+cloudbees-bitbucket-branch-source:866.vdea_7dcd3008e
+cloudbees-folder:6.858.v898218f3609d
+command-launcher:107.v773860566e2e
+commons-lang3-api:3.13.0-62.v7d18e55f51e2
+commons-text-api:1.11.0-95.v22a_d30ee5d36
+credentials-binding:657.v2b_19db_7d6e6d
+credentials:1319.v7eb_51b_3a_c97b_
+display-url-api:2.200.vb_9327d658781
+durable-task:543.v262f6a_803410
+echarts-api:5.4.3-2
+email-ext:2.104
+favorite:2.208.v91d65b_7792a_c
+font-awesome-api:6.5.1-2
+git-client:4.6.0
+git:5.2.1
+github-api:1.318-461.v7a_c09c9fa_d63
+github-branch-source:1772.va_69eda_d018d4
+github:1.37.3.1
+gradle:2.9
+gson-api:2.10.1-15.v0d99f670e0a_7
+handy-uri-templates-2-api:2.1.8-30.v7e777411b_148
+htmlpublisher:1.32
+instance-identity:185.v303dc7c645f9
+ionicons-api:56.v1b_1c8c49374e
+jackson2-api:2.16.1-373.ve709c6871598
+jakarta-activation-api:2.0.1-3
+jakarta-mail-api:2.0.1-3
+javax-activation-api:1.2.0-6
+javax-mail-api:1.6.2-9
+jaxb:2.3.9-1
+jdk-tool:73.vddf737284550
+jenkins-design-language:1.27.10
+jjwt-api:0.11.5-77.v646c772fddb_0
+joda-time-api:2.12.6-21.vca_fd74418fb_7
+jquery3-api:3.7.1-1
+json-path-api:2.9.0-33.v2527142f2e1d
+junit:1256.v002534a_5f33e
+ldap:711.vb_d1a_491714dc
+mailer:463.vedf8358e006b_
+matrix-auth:3.2.1
+matrix-project:822.824.v14451b_c0fd42
+mina-sshd-api-common:2.12.0-90.v9f7fb_9fa_3d3b_
+mina-sshd-api-core:2.12.0-90.v9f7fb_9fa_3d3b_
+okhttp-api:4.11.0-157.v6852a_a_fa_ec11
+pam-auth:1.10
+pipeline-aws:1.43
+pipeline-build-step:540.vb_e8849e1a_b_d8
+pipeline-github-lib:42.v0739460cda_c4
+pipeline-graph-analysis:202.va_d268e64deb_3
+pipeline-groovy-lib:704.vc58b_8890a_384
+pipeline-input-step:477.v339683a_8d55e
+pipeline-milestone-step:111.v449306f708b_7
+pipeline-model-api:2.2175.v76a_fff0a_2618
+pipeline-model-definition:2.2175.v76a_fff0a_2618
+pipeline-model-extensions:2.2175.v76a_fff0a_2618
+pipeline-rest-api:2.34
+pipeline-stage-step:305.ve96d0205c1c6
+pipeline-stage-tags-metadata:2.2175.v76a_fff0a_2618
+pipeline-stage-view:2.34
+plain-credentials:143.v1b_df8b_d3b_e48
+plugin-util-api:3.8.0
+pubsub-light:1.18
+resource-disposer:0.23
+scm-api:683.vb_16722fb_b_80b_
+script-security:1313.v7a_6067dc7087
+snakeyaml-api:2.2-111.vc6598e30cc65
+sse-gateway:1.26
+ssh-credentials:308.ve4497b_ccd8f4
+ssh-slaves:2.948.vb_8050d697fec
+sshd:3.322.v159e91f6a_550
+structs:337.v1b_04ea_4df7c8
+terraform:1.0.10
+timestamper:1.26
+token-macro:400.v35420b_922dcb_
+trilead-api:2.133.vfb_8a_7b_9c5dd1
+variant:60.v7290fc0eb_b_cd
+workflow-aggregator:596.v8c21c963d92d
+workflow-api:1289.va_cf779f32df0
+workflow-basic-steps:1042.ve7b_140c4a_e0c
+workflow-cps:3853.vb_a_490d892963
+workflow-durable-task-step:1317.v5337e0c1fe28
+workflow-job:1385.vb_58b_86ea_fff1
+workflow-multibranch:773.vc4fe1378f1d5
+workflow-scm-step:415.v434365564324
+workflow-step-api:657.v03b_e8115821b_
+workflow-support:865.v43e78cc44e0d
+ws-cleanup:0.45
