@@ -7,12 +7,5 @@ pipeline {
       }
     }
 
-    stage('Export Image') {
-      steps {
-        sh '''docker login  -u ${usuario} -p ${password}
-docker push ${usuario}/jenkins-kubernetes:${tagname}'''
-      }
-    }
-
   }
 }
