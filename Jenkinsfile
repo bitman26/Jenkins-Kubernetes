@@ -13,12 +13,13 @@ pipeline {
     stages {
         stage('GIT Stage') {
             steps {
+               // Clonar o repositório via SSH
+               git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
                 script {
-                    // Clonar o repositório via SSH
-                    git branch: 'main', credentialsId: 'jenkins-ssh-git', url: 'git@github.com:bitman26/Jenkins-Kubernetes.git'
                     // Copiar o repositório clonado para o servidor remoto
-                    sh "ssh-keygen -f  /var/jenkins_home/.ssh/known_hosts -R ${SSH_HOST}"
-                    sh "scp  -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/home/teste"
+                    sshagent(credentials: ['${SSH_CREDENTIALS_ID}']) {
+                      sh "scp  -r Jenkins-Kubernetes ${SSH_USER}@${SSH_HOST}:/home/teste"
+                    }
                 } 
             } 
         }
