@@ -17,9 +17,7 @@ pipeline {
                 sh  "scp -Rap Jenkins-Kubernetes  ${SSH_USER}@${SSH_HOST}:/home/teste"
             } 
         } 
-    }
-    
-    stages {
+	    
         stage('Build and Push Docker Image') {
             steps {
                 script {
