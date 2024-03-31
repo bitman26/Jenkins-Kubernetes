@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_CREDENTIALS_ID = 'docker-hub'
+        DOCKER_CREDENTIALS_ID =  credentialsId:('docker-hub')
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
         SSH_USER = 'teste'
         SSH_HOST = '172.22.129.214'
@@ -37,7 +37,7 @@ pipeline {
 
                     // Fazer login no Docker Hub no host remoto
                     sshagent(credentials: ['key-ssh-docker']) {
-                        sh "ssh ${SSH_USER}@${SSH_HOST} 'docker login -u ${DOCKER_CREDENTIALS_ID} -p ${DOCKER_CREDENTIALS_ID}'"
+                        sh "ssh ${SSH_USER}@${SSH_HOST}  'echo $DOCKER_CREDENTIALS_ID_PSW' | 'docker login -u $DOCKER_CREDENTIALS_ID_USR --password-stdin'"
                     }
 
                     // Fazer push da imagem para o Docker Hub no host remoto
