@@ -1,7 +1,7 @@
 version: "3"
 services:
     jenkins:
-        image: bitman26/jenkins-kubernetes:v4.0
+        image: bitman26/jenkins-kubernetes:latest
         volumes:
          - ./backup:/srv/backup 
         ports:
