@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_CREDENTIALS_ID =  credentialsId('docker-hub')
+        DOCKER_CREDENTIALS_ID =  credentials('docker-hub')
         DOCKER_IMAGE_NAME = 'bitman26/jenkins-kubernetes'
         SSH_USER = 'teste'
         SSH_HOST = '172.22.129.214'
