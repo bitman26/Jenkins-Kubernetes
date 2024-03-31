@@ -37,7 +37,7 @@ pipeline {
 
                     // Fazer login no Docker Hub no host remoto
                     sshagent(credentials: ['key-ssh-docker']) {
-                        sh "ssh ${SSH_USER}@${SSH_HOST}  'docker login -u $DOCKER_CREDENTIALS_ID_USR -p $DOCKER_CREDENTIALS_ID_PSW'"
+                        sh "ssh ${SSH_USER}@${SSH_HOST}  'echo $DOCKER_CREDENTIALS_ID_PSW | docker login -u $DOCKER_CREDENTIALS_ID_USR --password-stdin'"
                     }
 
                     // Fazer push da imagem para o Docker Hub no host remoto
