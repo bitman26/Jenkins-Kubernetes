@@ -51,12 +51,16 @@ pipeline {
     
     post {
         success {
-            sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
+            sshagent(credentials: ['key-ssh-docker']) {
+                sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
+            }
             echo 'Pipeline executada com sucesso!'
         }
         failure {
+            sshagent(credentials: ['key-ssh-docker']) {
+                sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
+            }
             echo 'Falha na execução da pipeline.'
-            sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
         }
     }
 }
