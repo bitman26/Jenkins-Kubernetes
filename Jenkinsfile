@@ -24,7 +24,7 @@ pipeline {
                 script {
                     // Copiar o repositório clonado para o servidor remoto
                     sshagent(credentials: ['key-ssh-docker']) {
-                        sh "scp -o StrictHostKeyChecking=no -r /var/jenkins_home/workspace/Jenkins-Kubernetes_main  ${SSH_HOST}:/tmp/Jenkins-Kubernetes"
+                        sh "scp -o StrictHostKeyChecking=no -r /var/jenkins_home/workspace/Jenkins-Kubernetes_main  ${SSH_USER}@${SSH_HOST}:/tmp/Jenkins-Kubernetes"
                     }
                 }
             } 
