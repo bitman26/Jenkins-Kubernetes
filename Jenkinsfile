@@ -51,8 +51,10 @@ pipeline {
     
     post {
         success {
+            // Limpando o Servidor
             sshagent(credentials: ['key-ssh-docker']) {
                 sh "ssh ${SSH_USER}@${SSH_HOST} 'rm -rf /tmp/Jenkins-Kubernetes'"
+                sh "ssh ${SSH_USER}@${SSH_HOST} 'docker rmi ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}.0'"
             }
             echo 'Pipeline executada com sucesso!'
         }
